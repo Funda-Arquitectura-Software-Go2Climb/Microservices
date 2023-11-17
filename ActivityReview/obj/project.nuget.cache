@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tIiWEGUlCbhpptYfqkWroSy8f14o9lasnS2jt/rJbmmaXKPx8cK7+HTLaTkxZtXuFGRcYVmUU8APSix7Yd3YLw==",
+  "dgSpecHash": "7g1j8PzDpL6UZL1unRitv8fg20XZrL9kzMhxgNrgLkk82S1x13ofpwZeDllSguJBmL37xMjddmYUzdJMnJBybg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alyne\\OneDrive - Universidad Peruana de Ciencias\\2023 2\\Funda\\Microservicio\\ActivityReview\\ActivityReview\\ActivityReview.csproj",
+  "projectFilePath": "C:\\Users\\alyne\\OneDrive - Universidad Peruana de Ciencias\\2023 2\\Funda\\PruebaMicroservicio\\Microservices\\ActivityReview\\ActivityReview.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alyne\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\alyne\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

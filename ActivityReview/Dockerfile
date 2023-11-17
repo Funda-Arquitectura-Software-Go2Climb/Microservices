@@ -1,21 +1,14 @@
-﻿# Etapa de construcción (build)
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+﻿FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ActivityReview.csproj .
-RUN dotnet restore
+COPY ["ActivityReview.csproj", "./"]
+RUN dotnet restore "ActivityReview.csproj"
 COPY . .
-RUN dotnet build -c Release -o /app/build
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet build "ActivityReview.csproj" -c Release -o /app/build
 
-COPY appsettings.json /app/publish/appsettings.json
+FROM build AS publish
+RUN dotnet publish "ActivityReview.csproj" -c Release -o /app/publish
 
-# Etapa de publicación (publish)
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-# Copiar desde la etapa de construcción a la etapa de publicación
-COPY --from=build /app/publish .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ActivityReview.dll"]
-
